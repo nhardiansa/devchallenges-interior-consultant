@@ -1,0 +1,51 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  width: 94%;
+  margin: auto;
+  background-color: #181719;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+}
+
+nav h1 {
+  text-transform: uppercase;
+  font-family: Crimson Pro;
+  font-weight: 200;
+  font-size: 14px;
+  text-align: center;
+  line-height: 25px;
+  color: #ffffff;
+}
+
+nav .box {
+  margin-top: 19px;
+  box-sizing: border-box;
+  border: 1px solid#ffffff;
+  width: 103px;
+  height: 31px;
+}
+
+nav .menu-icon {
+  margin-top: 25.5px;
+  width: 28.5px;
+  height: 19px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+nav .menu-icon span {
+  background-color: #ffffff;
+  width: 28.5px;
+  height: 3px;
+}
+
+@media screen and (max-width: 1024px);
