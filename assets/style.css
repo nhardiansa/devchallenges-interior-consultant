@@ -23,6 +23,7 @@ nav .box h1 {
   text-align: center;
   line-height: 25px;
   color: #ffffff;
+  cursor: pointer;
 }
 
 nav .box {
