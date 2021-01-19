@@ -7,7 +7,7 @@ body {
   width: 94%;
   margin: auto;
   background-color: #181719;
-  /* overflow-x: hidden; */
+  /* overflow: hidden; */
 }
 
 nav {
@@ -15,7 +15,7 @@ nav {
   justify-content: space-between;
 }
 
-nav h1 {
+nav .box h1 {
   text-transform: uppercase;
   font-family: Crimson Pro;
   font-weight: 200;
@@ -64,8 +64,16 @@ nav .menu a {
   text-decoration: none;
 }
 
+nav .menu a:hover {
+  font-weight: bold;
+}
+
 .content {
   margin-top: 38px;
+}
+
+.content .explained {
+  margin-bottom: 37px;
 }
 
 .content .explained h2 {
@@ -103,6 +111,7 @@ nav .menu a {
   color: #ffffff;
 
   text-decoration: none;
+  transition: 100ms ease-in-out;
 }
 
 .content .explained .link span {
@@ -114,7 +123,6 @@ nav .menu a {
 }
 
 .content .picture {
-  margin-top: 37px;
   display: flex;
   flex-direction: column;
 }
@@ -232,13 +240,20 @@ nav .menu a {
   nav .menu a {
     margin-bottom: 32px;
   }
-
-  nav .menu a:hover {
-    font-weight: bold;
-  }
 }
 
 @media screen and (min-width: 576px) {
+  nav .box {
+    margin-top: 42px;
+  }
+
+  nav .menu {
+    justify-content: space-around;
+  }
+
+  nav .menu a {
+    margin-top: 30px;
+  }
   nav .menu span {
     display: none;
   }
@@ -252,6 +267,85 @@ nav .menu a {
     justify-content: space-between;
     margin-top: 20px;
   }
+
+  .content {
+    margin-top: 90px;
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    grid-column-gap: 40px;
+  }
+
+  .content .explained {
+    grid-column: 1;
+  }
+
+  .content .explained p {
+    width: 90%;
+  }
+
+  .content .explained .link a:hover {
+    padding-bottom: 3px;
+    border-bottom: 3px solid #ffff;
+    border-radius: 1.5px;
+  }
+
+  .content .picture {
+    grid-column: 2;
+  }
+
+  .content .picture .card p {
+    width: 60%;
+  }
+
+  .footer p {
+    margin-top: 106px;
+    margin-bottom: 46px;
+    border-top: none;
+  }
 }
 
-@media screen and (min-width: 1024px);
+@media screen and (min-width: 1024px) {
+  nav .menu {
+    width: 40%;
+  }
+  .content {
+    grid-column-gap: 190px;
+  }
+
+  .content .explained h2 {
+    font-size: 48px;
+    line-height: 61px;
+    margin-bottom: 40px;
+  }
+
+  .content .explained p {
+    font-size: 24px;
+    line-height: 29px;
+  }
+
+  .content .explained .link a {
+    font-size: 18px;
+    line-height: 22px;
+  }
+
+  .content .picture .card .profile img {
+    width: 50px;
+    height: 50px;
+  }
+
+  .content .picture .card .profile .description h3 {
+    font-size: 14px;
+    line-height: 17px;
+  }
+
+  .content .picture .card .profile .description p {
+    font-size: 12px;
+    line-height: 15px;
+  }
+
+  .content .picture .card p {
+    font-size: 24px;
+    line-height: 31px;
+    width: 50%;
+  }
+}
